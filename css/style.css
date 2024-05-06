@@ -15,6 +15,7 @@ body {
   font-family: "Nunito sans", sans-serif;
   background-color: var(--bg);
   color: #fff;
+  min-height: 2000px;
 }
 
 /* Navbar */
@@ -124,16 +125,17 @@ body {
 .container-slide {
   margin-top: 5em;
   display: flex;
+  gap: 15em;
 }
 
 .slider-wrapper {
-  margin-right: 200px;
   float: right;
-  width: 500px;
-  height: 350px;
+  width: 600px;
+  height: 400px;
   border-radius: 0 20px 0 20px;
   position: relative;
   box-shadow: 5px 5px 0px var(--primary);
+  z-index: 1;
 }
 
 .slide {
@@ -154,7 +156,6 @@ body {
 #salesContactForm {
   /* Tambahkan gaya untuk form di sini */
   width: 500px;
-  margin-left: 50px;
   padding: 30px;
   border-radius: 5px;
   background-color: rgb(31, 31, 31, 0.5);
@@ -166,23 +167,48 @@ body {
 
 #salesContactForm label,
 #salesContactForm input,
-#salesContactForm select,
-#salesContactForm button {
+#salesContactForm select {
   display: block;
   width: 50%;
   margin-bottom: 10px;
 }
-salesContactForm label {
-  font-style: italic;
+
+#salesContactForm label {
+  font-weight: 700;
+}
+
+#salesContactForm input,
+select {
+  padding: 5px;
+  outline: none;
+  border: none;
+  background-color: rgb(155, 155, 155);
+  color: black;
+  font-weight: 500;
 }
 
 #salesContactForm button {
-  background-color: #007bff;
+  font-weight: 600;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #3e3e3e;
   color: white;
   padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+#salesContactForm button:hover {
+  background-color: #767676;
+}
+
+.crack {
+  padding-top: 100px;
+  text-align: center;
+}
+.crack h1 {
+  font-weight: 900;
+  font-size: 80px;
 }
 
 /* Media Queries */
@@ -228,6 +254,19 @@ salesContactForm label {
   }
   .navbar .navbar-group .navbar-nav a:hover::after {
     transform: scaleX(0.2);
+  }
+  .container-slide {
+    margin-top: 5em;
+    display: block;
+    justify-content: center;
+    justify-items: center;
+  }
+  .slider-wrapper {
+    display: none;
+  }
+
+  #salesContactForm {
+    z-index: 5;
   }
 }
 /* Mobile Phone */
