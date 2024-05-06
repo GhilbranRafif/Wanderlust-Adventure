@@ -52,7 +52,7 @@ document.addEventListener("click", function (e) {
           self.index = 0;
         }
         self._slideTo(self.index);
-      }, 5000);
+      }, 4000);
     },
 
     stopStart: function () {
@@ -80,3 +80,68 @@ document.addEventListener("click", function (e) {
   });
 })();
 // End Slider image
+
+// Validation Form
+function validateForm() {
+  const name = document.forms["salesContactForm"]["name"].value;
+  const email = document.forms["salesContactForm"]["email"].value;
+  const options = document.forms["salesContactForm"]["options"].value;
+
+  const isEmail = email.match(/[\w.]+@\w+.\w{2,3}(.\w{2,})?/);
+
+  if (!name) {
+    const errName = document.getElementById("name-error");
+
+    errName.style.display = "block";
+    errName.style.visibility = "visible";
+  }
+
+  if ((email && !isEmail) || !email) {
+    const errEmail = document.getElementById("email-error");
+
+    errEmail.style.display = "block";
+    errEmail.style.visibility = "visible";
+  }
+
+  if (options === "") {
+    const errOptions = document.getElementById("options-error");
+
+    errOptions.style.display = "block";
+    errOptions.style.visibility = "visible";
+  }
+
+  if (name && email && isEmail && options !== "") {
+    alert(`Data anda telah sukses terkirim, ${name}`);
+
+    return false;
+  }
+
+  return false;
+}
+
+function fillInput(fieldName) {
+  const inputValue = document.getElementById(fieldName).value;
+  const errorText = document.getElementById(`${fieldName}-error`);
+
+  if (inputValue && errorText.style.visibility === "visible") {
+    errorText.style.display = "none";
+    errorText.style.visibility = "hidden";
+  }
+}
+
+function selectOptions() {
+  const optionsValue = document.getElementById("options").value;
+  const errorText = document.getElementById("options-error");
+
+  if (optionsValue !== "" && errorText.style.visibility === "visible") {
+    errorText.style.display = "none";
+    errorText.style.visibility = "hidden";
+  }
+}
+
+document
+  .getElementById("salesContactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    validateForm();
+  });

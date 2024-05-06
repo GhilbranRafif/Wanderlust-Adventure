@@ -201,14 +201,35 @@ select {
 #salesContactForm button:hover {
   background-color: #767676;
 }
-
+/* Our Package */
 .crack {
   padding-top: 100px;
+  padding-bottom: 100px;
   text-align: center;
 }
 .crack h1 {
   font-weight: 900;
   font-size: 80px;
+}
+.package {
+  padding: 0 7%;
+  display: flex;
+  justify-content: space-between;
+}
+.package .package-option {
+  max-width: 30%;
+}
+.package .package-option h1 {
+  font-weight: 900;
+}
+
+.border {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 2px solid var(--primary);
+  width: 30%;
 }
 
 /* Media Queries */
