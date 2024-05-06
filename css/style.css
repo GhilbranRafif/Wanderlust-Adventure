@@ -79,7 +79,8 @@ body {
 .hero {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background-image: url(../asset/header-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -121,14 +122,18 @@ body {
 }
 /* Slider Image */
 .container-slide {
-  width: 1024px;
-  margin: 2em auto;
+  margin-top: 5em;
+  display: flex;
 }
 
 .slider-wrapper {
-  width: 100%;
-  height: 400px;
+  margin-right: 200px;
+  float: right;
+  width: 500px;
+  height: 350px;
+  border-radius: 0 20px 0 20px;
   position: relative;
+  box-shadow: 5px 5px 0px var(--primary);
 }
 
 .slide {
@@ -137,11 +142,47 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0;
+  border-radius: 0 20px 0 20px;
   transition: opacity 3s linear;
 }
 
 .slider-wrapper > .slide:first-child {
   opacity: 1;
+}
+
+/* FORM */
+#salesContactForm {
+  /* Tambahkan gaya untuk form di sini */
+  width: 500px;
+  margin-left: 50px;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: rgb(31, 31, 31, 0.5);
+  z-index: 2;
+}
+#salesContactForm h1 {
+  font-size: xx-large;
+}
+
+#salesContactForm label,
+#salesContactForm input,
+#salesContactForm select,
+#salesContactForm button {
+  display: block;
+  width: 50%;
+  margin-bottom: 10px;
+}
+salesContactForm label {
+  font-style: italic;
+}
+
+#salesContactForm button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Media Queries */

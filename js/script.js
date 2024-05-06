@@ -13,6 +13,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// Slider Image
 (function () {
   function Slideshow(element) {
     this.el = document.querySelector(element);
@@ -51,7 +52,7 @@ document.addEventListener("click", function (e) {
           self.index = 0;
         }
         self._slideTo(self.index);
-      }, 3000);
+      }, 5000);
     },
 
     stopStart: function () {
@@ -78,3 +79,4 @@ document.addEventListener("click", function (e) {
     var slider = new Slideshow("#slider-utama");
   });
 })();
+// End Slider image
