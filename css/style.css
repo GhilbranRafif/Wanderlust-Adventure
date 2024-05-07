@@ -126,41 +126,86 @@ footer .navbar-logo span {
   font-weight: 600;
   text-align: center;
 }
-/* Slider Image */
-.container-slide {
-  margin-top: 5em;
+
+aside {
   display: flex;
+}
+
+#slider-utama {
+  margin-top: 3%;
   gap: 15em;
 }
-
-.slider-wrapper {
-  float: right;
-  width: 600px;
-  height: 400px;
-  border-radius: 0 20px 0 20px;
+.instagram-post {
+  width: 380px;
+  padding: 0 20px;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  font-family: poppins, sans-serif;
+  overflow: hidden;
   position: relative;
-  box-shadow: 5px 5px 0px var(--primary);
-  z-index: 1;
+  border-radius: 20px;
+  z-index: 5;
 }
-
-.slide {
-  float: left;
+.instagram-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+.instagram-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.instagram-username {
+  font-weight: 700;
+}
+.instagram-slider {
+  width: 100%;
+  position: relative;
+  height: 350px;
+}
+.instagram-slide {
   position: absolute;
   width: 100%;
-  height: 100%;
+  border-radius: 20px;
   opacity: 0;
-  border-radius: 0 20px 0 20px;
-  transition: opacity 3s linear;
+  visibility: hidden;
+  transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
 }
-
-.slider-wrapper > .slide:first-child {
-  opacity: 1;
+.instagram-caption {
+  margin-top: 10px;
+  padding: 16px;
+  border-top: 1px solid #dbdbdb;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  z-index: 10;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* FORM */
 #salesContactForm {
-  /* Tambahkan gaya untuk form di sini */
   width: 500px;
+  height: 500px;
   padding: 30px;
   border-radius: 5px;
   background-color: rgb(31, 31, 31, 0.5);
@@ -206,13 +251,47 @@ select {
 #salesContactForm button:hover {
   background-color: #767676;
 }
+/* Our Service */
+
+.service_container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.heading_container {
+  padding-top: 70px !important;
+  padding-bottom: 50px !important;
+}
+
+.box {
+  background-color: #dbdbdb;
+  color: #010101;
+  width: 450px;
+  height: 250px;
+  text-align: center;
+  margin: 2em;
+  border-radius: 50px;
+  border-bottom: 10px solid var(--primary);
+}
+.img-box {
+  margin: 10px;
+}
+.img1 {
+  width: auto;
+  height: 100px;
+}
+.detail-box p {
+  max-width: 95%;
+  margin-left: 2%;
+}
 /* Our Package */
-.crack {
+.crack,
+.heading_container {
   padding-top: 100px;
   padding-bottom: 100px;
   text-align: center;
 }
-.crack h1 {
+.crack h1,
+.heading_container h1 {
   font-weight: 900;
   font-size: 80px;
 }

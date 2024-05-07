@@ -12,6 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- End Fonts -->
 
     <!-- Feather Icons -->
@@ -45,12 +50,48 @@
         <p>Begin your Adventure with us</p>
       </header>
       <aside class="container-slide" id="slider-utama">
-        <div class="slider-wrapper">
-          <img src="asset/image1.jpg" class="slide" />
-          <img src="asset/image2.jpg" class="slide" />
-          <img src="asset/image3.jpg" class="slide" />
-          <img src="asset/image4.jpg" class="slide" />
+        <!-- Instagram slide show -->
+        <div class="instagram-post">
+          <div class="instagram-header">
+            <img class="instagram-avatar" src="asset/avatar.jpg" alt="avatar" />
+            <div class="instagram-username">Florence Hughes</div>
+          </div>
+          <div id="hero-slider" class="instagram-slider">
+            <img
+              id="slide1"
+              class="instagram-slide"
+              src="asset/image1.jpg"
+              alt="post image"
+            />
+            <img
+              id="slide2"
+              class="instagram-slide"
+              src="asset/image2.jpg"
+              alt="post image"
+            />
+            <img
+              id="slide3"
+              class="instagram-slide"
+              src="asset/image3.jpg"
+              alt="post image"
+            />
+            <img
+              id="slide4"
+              class="instagram-slide"
+              src="asset/image4.jpg"
+              alt="post image"
+            />
+            <!-- Tambahkan lebih banyak gambar disini -->
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+          <div class="instagram-caption">
+            <p>
+              Liburan jadi lebih menyenangkan bersama Wanderlust Adventure !
+            </p>
+          </div>
         </div>
+
         <!-- FORM  -->
         <form id="salesContactForm">
           <h1>Contact Us</h1>
@@ -88,6 +129,84 @@
     <!-- End Hero Section -->
 
     <!-- Start Body Section -->
+    <section class="service_section">
+      <div class="container">
+        <div class="heading_container">
+          <h1>Our Services</h1>
+        </div>
+
+        <div
+          class="service_container"
+          style="margin-left: 5%; margin-right: 5%"
+        >
+          <div class="box">
+            <div class="img-box">
+              <img src="asset/s1.png" class="img1" alt="" />
+            </div>
+            <div class="detail-box">
+              <h2>Pemesanan Tiket Pesawat</h2>
+              <p>
+                Menyediakan berbagai pilihan tiket pesawat sesuai dengan
+                preferensi dan kebutuhan pelanggan.
+              </p>
+            </div>
+          </div>
+          <div class="box active">
+            <div class="img-box">
+              <img src="asset/s2.png" class="img1" alt="" />
+            </div>
+            <div class="detail-box">
+              <h2>Asuransi Perjalanan</h2>
+              <p>
+                Menawarkan asuransi perjalanan untuk melindungi pelanggan dari
+                risiko selama perjalanan
+              </p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="asset/s3.png" class="img1" alt="" />
+            </div>
+            <div class="detail-box">
+              <h2>Paket Wisata</h2>
+              <p>
+                Menawarkan paket wisata yang sudah dirancang secara menyeluruh.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="service_container"
+          style="margin-left: 15%; margin-right: 15%"
+        >
+          <div class="box">
+            <div class="img-box">
+              <img src="asset/s4.png" class="img1" alt="" />
+            </div>
+            <div class="detail-box">
+              <h2>Transportasi Lokal</h2>
+              <p>
+                Mengatur transportasi lokal menggunakan transportasi umum di
+                destinasi wisata.
+              </p>
+            </div>
+          </div>
+          <div class="box active">
+            <div class="img-box">
+              <img src="asset/s5.png" class="img1" alt="" />
+            </div>
+            <div class="detail-box">
+              <h2>Akomodasi</h2>
+              <p>
+                Menyediakan pilihan akomodasi penginapan sesuai dengan
+                preferensi pelanggan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div id="about" class="crack">
       <h1>OUR PACKAGE</h1>
     </div>
