@@ -56,11 +56,14 @@ function validateForm() {
 
   const isEmail = email.match(/[\w.]+@\w+.\w{2,3}(.\w{2,})?/);
 
+  let isValid = true;
+
   if (!name) {
     const errName = document.getElementById("name-error");
 
     errName.style.display = "block";
     errName.style.visibility = "visible";
+    isValid = false;
   }
 
   if ((email && !isEmail) || !email) {
@@ -68,22 +71,22 @@ function validateForm() {
 
     errEmail.style.display = "block";
     errEmail.style.visibility = "visible";
+    isValid = false;
   }
 
   if (options === "") {
-    const errOptions = document.getElementById("options-error");
+    const errOptions = document.getElementById("option-error");
 
     errOptions.style.display = "block";
     errOptions.style.visibility = "visible";
+    isValid = false;
   }
 
-  if (name && email && isEmail && options !== "") {
-    alert(`Data anda telah sukses terkirim, ${name}`);
-
-    return false;
+  if (isValid) {
+    alert(`Selamat Datang ${name}, Harap tunggu email dari sales kami `);
   }
 
-  return false;
+  return isValid;
 }
 
 function fillInput(fieldName) {
@@ -98,7 +101,7 @@ function fillInput(fieldName) {
 
 function selectOptions() {
   const optionsValue = document.getElementById("options").value;
-  const errorText = document.getElementById("options-error");
+  const errorText = document.getElementById("option-error");
 
   if (optionsValue !== "" && errorText.style.visibility === "visible") {
     errorText.style.display = "none";
@@ -109,6 +112,18 @@ function selectOptions() {
 document
   .getElementById("salesContactForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault();
-    validateForm();
+    const isValid = validateForm();
+    if (!isValid) {
+      event.preventDefault();
+    }
   });
+
+document.getElementById("name").addEventListener("input", function () {
+  fillInput("name");
+});
+
+document.getElementById("email").addEventListener("input", function () {
+  fillInput("email");
+});
+
+document.getElementById("options").addEventListener("change", selectOptions);
