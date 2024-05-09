@@ -1,3 +1,14 @@
+// Efek Scrolling
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
+
 // Toogle Class Active
 const navbarNav = document.querySelector(".navbar-nav");
 document.querySelector("#hamburger-menu").onclick = () => {

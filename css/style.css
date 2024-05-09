@@ -271,6 +271,7 @@ select {
   color: #010101;
   width: 450px;
   height: 250px;
+  padding: 0 1em;
   text-align: center;
   margin: 2em;
   border-radius: 50px;
@@ -421,6 +422,11 @@ select {
   #hamburger-menu {
     display: inline-block;
   }
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .navbar .navbar-group .navbar-nav {
     position: absolute;
     top: 100%;
@@ -449,8 +455,7 @@ select {
     transform: scaleX(0.2);
   }
   .container-slide {
-    margin-top: 5em;
-    display: block;
+    display: contents;
     justify-content: center;
     justify-items: center;
   }
@@ -458,10 +463,22 @@ select {
     display: none;
   }
 
-  #salesContactForm {
-    z-index: 5;
+  .instagram-post {
+    margin: 8em 0;
+  }
+  .img1 {
+    width: 50px;
+    height: auto;
+  }
+  .box {
+    padding: 1em;
+    height: 20em;
+  }
+  .box p {
+    text-align: center;
   }
 }
+
 /* Mobile Phone */
 @media (max-width: 450px) {
   html {
