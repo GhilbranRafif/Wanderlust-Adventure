@@ -22,8 +22,19 @@ let interval;
 
 function showSlide() {
   slides.forEach((slide, i) => {
-    slide.style.opacity = i === index ? 1 : 0;
-    slide.style.visibility = i === index ? "visible" : "hidden";
+    if (i === index) {
+      slide.style.opacity = 1;
+      slide.style.visibility = "visible";
+      slide.style.transform = "translateX(0)";
+    } else if (i < index) {
+      slide.style.opacity = 0;
+      slide.style.visibility = "hidden";
+      slide.style.transform = "translateX(-100%)";
+    } else {
+      slide.style.opacity = 0;
+      slide.style.visibility = "hidden";
+      slide.style.transform = "translateX(100%)";
+    }
   });
 }
 

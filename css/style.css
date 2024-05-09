@@ -171,8 +171,11 @@ aside {
   border-radius: 20px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out,
+    visibility 2s ease-in-out;
+  transform: translateX(-100%);
 }
+
 .instagram-caption {
   margin-top: 10px;
   padding: 16px;
